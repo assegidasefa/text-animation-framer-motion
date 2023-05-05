@@ -5,7 +5,9 @@ function App() {
   return (
     <div>
       {sentence.map((letter, index) => {
-        return <TextSpan key={index}>{letter}</TextSpan>;
+        return (
+          <TextSpan key={index}>{letter === " " ? "\u00A0" : letter}</TextSpan>
+        );
       })}
     </div>
   );
